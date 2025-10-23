@@ -364,7 +364,10 @@ p {
 /*--bookself--*/
 .book-card {
     display: block;
-    height: 340px;
+    height: auto;
+    min-height: 340px;
+    margin-bottom: 2em;
+    clear: both;
 }
 .book-cover {
     float: left;
@@ -380,8 +383,8 @@ p {
 }
 
 .book-info {
-    /* margin-left: 220px; */
-    display: inline-flexbox;
+    margin-left: 220px;
+    display: block;
 }
 .book-info h2 {
     color: #008B8B;
@@ -1098,6 +1101,68 @@ h2.resp-accordion {
     .footer {
         padding: 1.5em 0;
     }
+
+    /* Mobile bookshelf fixes */
+    .book-card {
+        height: auto;
+        min-height: auto;
+        margin-bottom: 3em;
+    }
+
+    .book-cover {
+        float: none;
+        width: 100%;
+        height: auto;
+        text-align: center;
+        margin-bottom: 1em;
+    }
+
+    .book-cover img {
+        width: 200px;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .book-info {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .book-info h2 {
+        font-size: 1.3em;
+        margin-bottom: 0.5em;
+    }
+
+    .book-info .sub-title {
+        font-size: 0.9em;
+        margin-bottom: 1em;
+    }
+
+    .book-info p {
+        font-size: 0.9em;
+        line-height: 1.6;
+        margin-bottom: 1em;
+    }
+
+    .book-info h3 {
+        font-size: 1.1em;
+        margin-bottom: 0.5em;
+    }
+
+    .book-info .link-box {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .book-info a {
+        font-size: 0.9em;
+        padding: 8px 15px;
+        margin: 5px 5px 5px 0;
+        flex: 1;
+        min-width: 120px;
+        text-align: center;
+    }
 }
 
 @media(max-width:480px) {
@@ -1180,6 +1245,29 @@ h2.resp-accordion {
 
     .footer p {
         font-size: 1em;
+    }
+
+    /* Additional mobile bookshelf fixes for smaller screens */
+    .book-cover img {
+        width: 180px;
+    }
+
+    .book-info h2 {
+        font-size: 1.2em;
+    }
+
+    .book-info .sub-title {
+        font-size: 0.85em;
+    }
+
+    .book-info p {
+        font-size: 0.85em;
+    }
+
+    .book-info a {
+        font-size: 0.8em;
+        padding: 6px 12px;
+        min-width: 100px;
     }
 }
 
